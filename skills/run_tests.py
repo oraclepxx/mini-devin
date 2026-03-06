@@ -1,9 +1,10 @@
 import subprocess
+import sys
 
 def run_tests():
 
     result = subprocess.run(
-        ["pytest"],
+        [sys.executable, "-m", "pytest"],
         cwd="workspace",
         capture_output=True,
         text=True
